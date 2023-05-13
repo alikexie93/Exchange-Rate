@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ik-cm-QFm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Курс валют-->
+        <scene sceneID="bvb-Og-qte">
+            <objects>
+                <viewController id="8dU-f5-uoB" customClass="CurrencyViewController" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MR9-xL-cT1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-g3-gCL">
+                                <rect key="frame" x="0.0" y="154.33333333333331" width="393" height="697.66666666666674"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xuv-aR-k83">
+                                    <size key="itemSize" width="172" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="currentExchange" id="GMM-9R-Wxh" customClass="CurrentExchangeCell" customModule="Currency" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MLq-uf-I3X">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iTV-YG-WFn">
+                                                    <rect key="frame" x="32.666666666666657" y="47" width="107" height="56"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZG-Os-mXO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="107" height="28.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcG-ND-dqM">
+                                                            <rect key="frame" x="0.0" y="36.666666666666671" width="107" height="19.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iTV-YG-WFn" firstAttribute="centerY" secondItem="MLq-uf-I3X" secondAttribute="centerY" id="40t-iS-KzP"/>
+                                                <constraint firstItem="iTV-YG-WFn" firstAttribute="centerX" secondItem="MLq-uf-I3X" secondAttribute="centerX" id="xVc-ju-DhC"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G2-y2-Mfv">
+                                <rect key="frame" x="16" y="118.99999999999999" width="361" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="syj-kW-6XX"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="7G2-y2-Mfv" firstAttribute="top" secondItem="syj-kW-6XX" secondAttribute="top" constant="16" id="KVl-8Y-MPz"/>
+                            <constraint firstItem="DgI-g3-gCL" firstAttribute="trailing" secondItem="syj-kW-6XX" secondAttribute="trailing" id="Nfj-DM-Qe7"/>
+                            <constraint firstItem="syj-kW-6XX" firstAttribute="trailing" secondItem="7G2-y2-Mfv" secondAttribute="trailing" constant="16" id="OR0-We-cxY"/>
+                            <constraint firstItem="7G2-y2-Mfv" firstAttribute="leading" secondItem="syj-kW-6XX" secondAttribute="leading" constant="16" id="ThR-H1-0bT"/>
+                            <constraint firstAttribute="bottom" secondItem="DgI-g3-gCL" secondAttribute="bottom" id="ddQ-bq-vpY"/>
+                            <constraint firstItem="DgI-g3-gCL" firstAttribute="top" secondItem="7G2-y2-Mfv" secondAttribute="bottom" constant="16" id="eRN-2A-Dvd"/>
+                            <constraint firstItem="DgI-g3-gCL" firstAttribute="leading" secondItem="syj-kW-6XX" secondAttribute="leading" id="g8m-H9-gzx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Курс валют" id="UbH-hf-fWp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEx-9l-Pbq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590.0763358778624" y="75.352112676056336"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zz2-DC-llI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ik-cm-QFm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hGd-VH-nwc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8dU-f5-uoB" kind="relationship" relationship="rootViewController" id="knc-Yd-QfL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CuM-Zl-GBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663.35877862595419" y="75.352112676056336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

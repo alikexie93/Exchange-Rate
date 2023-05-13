@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		089922D02A0FFA5900E19843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922CF2A0FFA5900E19843 /* AppDelegate.swift */; };
 		089922D22A0FFA5900E19843 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922D12A0FFA5900E19843 /* SceneDelegate.swift */; };
-		089922D42A0FFA5900E19843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922D32A0FFA5900E19843 /* ViewController.swift */; };
 		089922D72A0FFA5900E19843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089922D52A0FFA5900E19843 /* Main.storyboard */; };
 		089922D92A0FFA5B00E19843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089922D82A0FFA5B00E19843 /* Assets.xcassets */; };
 		089922DC2A0FFA5B00E19843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089922DA2A0FFA5B00E19843 /* LaunchScreen.storyboard */; };
+		089922EB2A10105000E19843 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922EA2A10105000E19843 /* CurrencyViewController.swift */; };
+		089922ED2A10166200E19843 /* CurrentExchangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922EC2A10166200E19843 /* CurrentExchangeCell.swift */; };
+		089922EF2A10194400E19843 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922EE2A10194400E19843 /* Currency.swift */; };
+		089922F12A10195500E19843 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089922F02A10195500E19843 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		089922CC2A0FFA5900E19843 /* Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089922CF2A0FFA5900E19843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089922D12A0FFA5900E19843 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		089922D32A0FFA5900E19843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		089922D62A0FFA5900E19843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		089922D82A0FFA5B00E19843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		089922DB2A0FFA5B00E19843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		089922DD2A0FFA5B00E19843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089922EA2A10105000E19843 /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		089922EC2A10166200E19843 /* CurrentExchangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentExchangeCell.swift; sourceTree = "<group>"; };
+		089922EE2A10194400E19843 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		089922F02A10195500E19843 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,74 @@
 		089922CE2A0FFA5900E19843 /* Currency */ = {
 			isa = PBXGroup;
 			children = (
-				089922CF2A0FFA5900E19843 /* AppDelegate.swift */,
-				089922D12A0FFA5900E19843 /* SceneDelegate.swift */,
-				089922D32A0FFA5900E19843 /* ViewController.swift */,
-				089922D52A0FFA5900E19843 /* Main.storyboard */,
-				089922D82A0FFA5B00E19843 /* Assets.xcassets */,
-				089922DA2A0FFA5B00E19843 /* LaunchScreen.storyboard */,
-				089922DD2A0FFA5B00E19843 /* Info.plist */,
+				089922E42A0FFA8000E19843 /* ViewControllers */,
+				089922E92A0FFAAF00E19843 /* Views */,
+				089922E72A0FFA9A00E19843 /* Models */,
+				089922E82A0FFAA100E19843 /* Services */,
+				089922E52A0FFA8900E19843 /* Storyboards */,
+				089922E32A0FFA7900E19843 /* App */,
+				089922E62A0FFA9100E19843 /* Resources */,
 			);
 			path = Currency;
+			sourceTree = "<group>";
+		};
+		089922E32A0FFA7900E19843 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				089922CF2A0FFA5900E19843 /* AppDelegate.swift */,
+				089922D12A0FFA5900E19843 /* SceneDelegate.swift */,
+				089922DD2A0FFA5B00E19843 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		089922E42A0FFA8000E19843 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				089922EA2A10105000E19843 /* CurrencyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		089922E52A0FFA8900E19843 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				089922D52A0FFA5900E19843 /* Main.storyboard */,
+				089922DA2A0FFA5B00E19843 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		089922E62A0FFA9100E19843 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				089922D82A0FFA5B00E19843 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		089922E72A0FFA9A00E19843 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				089922EE2A10194400E19843 /* Currency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		089922E82A0FFAA100E19843 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				089922F02A10195500E19843 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		089922E92A0FFAAF00E19843 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				089922EC2A10166200E19843 /* CurrentExchangeCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089922D42A0FFA5900E19843 /* ViewController.swift in Sources */,
+				089922F12A10195500E19843 /* NetworkManager.swift in Sources */,
+				089922ED2A10166200E19843 /* CurrentExchangeCell.swift in Sources */,
+				089922EF2A10194400E19843 /* Currency.swift in Sources */,
 				089922D02A0FFA5900E19843 /* AppDelegate.swift in Sources */,
+				089922EB2A10105000E19843 /* CurrencyViewController.swift in Sources */,
 				089922D22A0FFA5900E19843 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +357,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NCB777A2J8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Currency/Info.plist;
+				INFOPLIST_FILE = Currency/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Курс валют";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = alikexie.Currency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +389,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NCB777A2J8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Currency/Info.plist;
+				INFOPLIST_FILE = Currency/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Курс валют";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +403,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = alikexie.Currency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
